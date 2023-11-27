@@ -34,8 +34,8 @@ const styles = {
     width: 70%;
   `,
   caption: css`
-    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-    font-size: 1rem;
+    font-family: "Old Standard TT", serif;
+    font-size: 1.3rem;
     color: black;
     margin: 10px 0px;
   `,

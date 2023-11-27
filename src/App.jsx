@@ -1,13 +1,15 @@
 import bwBlob from "./assets/bw_pitfire_blob.jpg";
 import { css } from "@emotion/css";
 import ImageModule from "./ImageModule";
+import Contact from "./Contact";
 
 const styles = {
   outerContainer: css`
     padding-top: 4rem;
-    padding-bottom: 4rem;
+    padding-bottom: 2rem;
     display: flex;
-    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     width: 100%;
     background-color: snow;
   `,
@@ -19,17 +21,20 @@ const styles = {
     justify-content: center;
   `,
   header: css`
-    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    font-family: "Bebas Neue", sans-serif;
     background-color: #dcdcdca8;
     padding: 2rem;
-    width: 26rem;
-    margin-top: -1.5rem;
+    width: 30rem;
+    margin-top: -2.1rem;
     position: absolute;
     left: 0rem;
-    font-size: 2.5rem;
+    font-size: 4rem;
   `,
   imageModuleContainer: css`
     padding-top: 70px;
+  `,
+  copyright: css`
+    margin-top: 4rem;
   `,
 };
 
@@ -44,6 +49,10 @@ const App = () => {
           <ImageModule />
         </div>
       </div>
+      <div className={styles.innerContainer}>
+        <Contact />
+      </div>
+      <p className={styles.copyright}>© Becca Lee {new Date().getFullYear()}</p>
     </div>
   );
 };
