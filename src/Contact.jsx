@@ -5,23 +5,34 @@ const styles = {
     font-family: "Bebas Neue", sans-serif;
     background-color: #dcdcdca8;
     padding: 2rem;
-    width: 15rem;
-    margin-top: -6.5rem;
-    position: absolute;
-    right: -7rem;
-    font-size: 4rem;
+    width: 100%;
+    font-size: 2.5rem;
+    @media screen and (min-width: 780px) {
+      width: 15rem;
+      margin-top: -6.5rem;
+      position: absolute;
+      right: -7rem;
+      font-size: 4rem;
+    }
   `,
   textBlock: css`
     font-family: "Old Standard TT", serif;
     font-size: 1.3rem;
     display: block;
-    padding: 60px 40px;
+    padding: 20px;
+    @media screen and (min-width: 780px) {
+      padding: 60px 40px;
+    }
   `,
   textContainer: css`
     background-color: #f6f4ef;
-    width: 70%;
+    width: 100%;
     position: relative;
-    margin-top: 10rem;
+    margin-top: 10px;
+    @media screen and (min-width: 780px) {
+      width: 70%;
+      margin-top: 10rem;
+    }
   `,
   link: css`
     color: black;

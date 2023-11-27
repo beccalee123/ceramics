@@ -4,40 +4,57 @@ import Contact from "./Contact";
 
 const styles = {
   outerContainer: css`
-    padding-top: 4rem;
-    padding-bottom: 2rem;
+    padding-bottom: 1rem;
     display: flex;
     align-items: center;
     flex-direction: column;
     width: 100%;
     background-color: snow;
+    @media screen and (min-width: 780px) {
+      padding-top: 4rem;
+      padding-bottom: 2rem;
+    }
   `,
   innerContainer: css`
-    width: 80%;
     max-width: 800px;
     position: relative;
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    @media screen and (min-width: 780px) {
+      flex-direction: row;
+      width: 80%;
+    }
   `,
   header: css`
     font-family: "Bebas Neue", sans-serif;
     background-color: #dcdcdca8;
+    width: 100%;
     padding: 2rem;
-    width: 30rem;
-    margin-top: -2.1rem;
-    position: absolute;
-    left: 0rem;
-    font-size: 4rem;
+    font-size: 2.5rem;
+
+    @media screen and (min-width: 780px) {
+      width: 30rem;
+      margin-top: -2.1rem;
+      position: absolute;
+      left: 0rem;
+      font-size: 4rem;
+    }
   `,
   imageModuleContainer: css`
-    padding-top: 70px;
+    padding-top: 2rem;
+    @media screen and (min-width: 780px) {
+      padding-top: 5rem;
+    }
   `,
   copyright: css`
-    margin-top: 4rem;
+    margin-top: 2rem;
+    @media screen and (min-width: 780px) {
+      margin-top: 4rem;
+    }
   `,
 };
-
-// TODO: add mobile styling
 
 const App = () => {
   return (

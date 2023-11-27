@@ -35,9 +35,12 @@ const styles = {
   `,
   caption: css`
     font-family: "Old Standard TT", serif;
-    font-size: 1.3rem;
     color: black;
+    font-size: 1rem;
     margin: 10px 0px;
+    @media screen and (min-width: 780px) {
+      font-size: 1.3rem;
+    }
   `,
 };
 
@@ -106,7 +109,7 @@ const ImageModule = () => {
         <img
           src={blobs[blobDisplayed].image}
           className={styles.image}
-          altText={blobs[blobDisplayed].altText}
+          alttext={blobs[blobDisplayed].altText}
         />
         <p className={styles.caption}>{`${blobs[blobDisplayed].caption}`}</p>
       </div>
