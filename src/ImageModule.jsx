@@ -44,32 +44,38 @@ const styles = {
 const blobs = [
   {
     image: bwBlob,
-    altText: "",
+    altText:
+      "A tall, curvaceous sculpture with an undulating shape. It has a shiny black & white smoky surface with a strong demarcation between the two colors",
     caption: "Pit fired stoneware with terra sigillata - 2023",
   },
   {
     image: platinumBlob1,
-    altText: "",
+    altText:
+      "An amorphous shape with circular divots. The surface is a shiny platinum color that shines brightly where it catches the light.",
     caption: "Stoneware with platinum luster - 2023",
   },
   {
     image: mossyBlob,
-    altText: "",
+    altText:
+      "A sculpture with an undulating shape comprised of bigger and smaller mounds. The surface is a pale blue-green with sections of smooth glaze ribboning through sections of divots that look like hammered-metal",
     caption: "Textured stoneware with Oribe glaze - 2023",
   },
   {
     image: lavaBlob,
-    altText: "",
+    altText:
+      "A tall amorphous shape that brings to mind an abstract hunched figure. It's a dark red with clouds and spots of grey, black, and cream stretching across the surface like a galaxy.",
     caption: "Pit fired stoneware with terra sigillata - 2023",
   },
   {
     image: rainbowBlob,
-    altText: "",
-    caption: "Raku fired stoneware with Higby Blue glaze - 2023",
+    altText:
+      "A bulbous sculpture with multi-sized circular divots. It has a shiny, multicolored surface that moves between chartreuse greens, rusty reds, light blues, and yellows. ",
+    caption: "Raku glazed & fired stoneware - 2023",
   },
   {
     image: smokyBlob,
-    altText: "",
+    altText:
+      "A curved sculpture with a surface color of warm and cool greys that form a smoky pattern that evokes galaxies. ",
     caption: "Pit fired stoneware with terra sigillata - 2023",
   },
 ];
@@ -90,7 +96,6 @@ const ImageModule = () => {
       >
         <ArrowLeft />
       </button>
-      {/* // TODO: Add alt text */}
       <div
         className={css`
           display: flex;
