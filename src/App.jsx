@@ -1,4 +1,3 @@
-import bwBlob from "./assets/bw_pitfire_blob.jpg";
 import { css } from "@emotion/css";
 import ImageModule from "./ImageModule";
 import Contact from "./Contact";
