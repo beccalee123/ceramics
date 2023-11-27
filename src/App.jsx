@@ -35,7 +35,11 @@ const styles = {
     font-size: 2.5rem;
 
     @media screen and (min-width: 780px) {
-      width: 30rem;
+      width: -moz-max-content;
+      width: -webkit-max-content;
+      width: intrinsic;
+      white-space: nowrap;
+      overflow-wrap: no-wrap;
       margin-top: -2.1rem;
       position: absolute;
       left: 0rem;

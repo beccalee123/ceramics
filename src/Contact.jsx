@@ -13,6 +13,9 @@ const styles = {
       position: absolute;
       right: -7rem;
       font-size: 4rem;
+      width: -moz-max-content;
+      width: -webkit-max-content;
+      width: intrinsic;
     }
   `,
   textBlock: css`
