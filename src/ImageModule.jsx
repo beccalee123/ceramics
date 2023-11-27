@@ -88,8 +88,8 @@ const ImageModule = () => {
 
   return (
     <div className={styles.container}>
-      {/* // TODO: add aria label */}
       <button
+        aria-label="Previous image"
         className={styles.button}
         disabled={blobDisplayed === 0}
         onClick={onClickBackward}
@@ -110,8 +110,8 @@ const ImageModule = () => {
         />
         <p className={styles.caption}>{`${blobs[blobDisplayed].caption}`}</p>
       </div>
-      {/* // TODO: add aria label */}
       <button
+        aria-label="Next image"
         className={styles.button}
         disabled={blobDisplayed === blobs.length - 1}
         onClick={onClickForward}
