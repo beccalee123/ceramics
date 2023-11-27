@@ -1,35 +1,51 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import bwBlob from "./assets/bw_pitfire_blob.jpg";
+import { css } from "@emotion/css";
+import ImageModule from "./ImageModule";
 
-function App() {
-  const [count, setCount] = useState(0)
+const styles = {
+  outerContainer: css`
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: snow;
+  `,
+  innerContainer: css`
+    width: 80%;
+    max-width: 800px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+  `,
+  header: css`
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    background-color: #dcdcdca8;
+    padding: 2rem;
+    width: 26rem;
+    margin-top: -1.5rem;
+    position: absolute;
+    left: 0rem;
+    font-size: 2.5rem;
+  `,
+  imageModuleContainer: css`
+    padding-top: 70px;
+  `,
+};
 
+// TODO: add mobile styling
+
+const App = () => {
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className={styles.outerContainer}>
+      <div className={styles.innerContainer}>
+        <h1 className={styles.header}>Becca Lee Ceramics</h1>
+        <div className={styles.imageModuleContainer}>
+          <ImageModule />
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    </div>
+  );
+};
 
-export default App
+export default App;
