@@ -6,7 +6,7 @@ import platinumBlob1 from "./assets/platinum_blob1.jpg";
 import rainbowBlob from "./assets/rainbow_raku_blob.jpg";
 import smokyBlob from "./assets/smoky_pitfire_blob.jpg";
 import { ArrowLeft } from "./assets/ArrowLeft.jsx";
-import { ArrowRight } from "./assets/arrowRight";
+import { ArrowRight } from "./assets/ArrowRight";
 import { css } from "@emotion/css";
 
 const styles = {
