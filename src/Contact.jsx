@@ -1,22 +1,15 @@
-import { css } from "@emotion/css";
+import { css, cx } from "@emotion/css";
 
 const styles = {
   heading: css`
     font-family: "Bebas Neue", sans-serif;
-    background-color: #dcdcdca8;
-    padding: 2rem;
-    width: 100%;
     font-size: 2.5rem;
     @media screen and (min-width: 780px) {
-      width: 15rem;
-      margin-top: -6.5rem;
-      position: absolute;
-      right: -7rem;
       font-size: 4rem;
-      width: -moz-max-content;
-      width: -webkit-max-content;
-      width: intrinsic;
     }
+  `,
+  secondHeading: css`
+    margin-top: 4rem;
   `,
   textBlock: css`
     font-family: "Old Standard TT", serif;
@@ -24,16 +17,17 @@ const styles = {
     display: block;
     padding: 20px;
     @media screen and (min-width: 780px) {
-      padding: 60px 40px;
+      padding: 32px 40px;
     }
   `,
   textContainer: css`
-    background-color: #f6f4ef;
-    width: 100%;
-    position: relative;
     margin-top: 10px;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     @media screen and (min-width: 780px) {
-      width: 70%;
       margin-top: 10rem;
     }
   `,
@@ -45,24 +39,52 @@ const styles = {
 const Contact = () => {
   return (
     <div className={styles.textContainer}>
-      <h2 className={styles.heading}>Contact</h2>
+      <h2 className={styles.heading}>About</h2>
       <p className={styles.textBlock}>
-        Hi! I'm Becca - a part-time ceramicist and full-time software engineer.
-        I love working with clay to create sculptural organic shapes that break
-        from the rigidity of my day-to-day life. I often build without a formal
-        plan, letting the clay and my instincts naturally guide me toward the
-        final shape. I also enjoy playing with texture, whether it be burnishing
-        to a radiant shine, mimicking the topography of hammered metal, or
-        getting a little weird with gloop and spikes.
+        {`Hi! I'm Becca - a Seattle-based ceramic artist and blob sculpture
+        enthusiast. I love working with clay to create sculptural organic shapes
+        that break from the rigidity of my day-to-day life. I often build
+        without a formal plan, letting the clay and my instincts naturally guide
+        me toward a piece's final shape. I also enjoy playing with pattern and
+        texture and have been known to spend hours on end hand painting dots,
+        filling in carvings with glaze or luster, or burnishing to a high shine
+        (typically questioning my sanity when I reach about the 3 hour mark but
+        deciding it was all extremely worth it by the end).`}
         <br />
         <br />
-        If you'd like to chat about collaboration or commisions, please reach
-        out via{" "}
-        <a className={styles.link} href="mailto:rebecca.kirstin.lee@gmail.com">
-          email
-        </a>
-        . I'd love to chat with you!
+        {`While I've been creative my whole life, I had a long absence from the
+        arts in my adult life. It's been a joy to return to my roots with
+        ceramics and I'm so grateful to have this creative outlet that helps me
+        find joy even during the hardest of times.`}
       </p>
+
+      <h2 className={cx(styles.heading, styles.secondHeading)}>Contact</h2>
+      <div className={styles.textBlock}>
+        <p>
+          {`If you'd like to chat about collaborations, commisions, or other
+          opportunities please reach out!`}
+        </p>
+        <br />
+        Email:{" "}
+        <a
+          className={styles.link}
+          href="mailto:becca@beccaleeceramics.com"
+          target="_blank"
+          rel="noreferrer"
+        >
+          becca@beccaleeceramics.com
+        </a>
+        <br />
+        Instagram:{" "}
+        <a
+          className={styles.link}
+          href="https://www.instagram.com/beccaleeceramics/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          @beccaleeceramics
+        </a>
+      </div>
     </div>
   );
 };

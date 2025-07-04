@@ -1,10 +1,14 @@
 import { useState } from "react";
-import bwBlob from "./assets/bw_pitfire_blob.jpg";
-import lavaBlob from "./assets/lava_pitfire_blob.jpg";
-import mossyBlob from "./assets/mossy_blob.jpg";
-import platinumBlob1 from "./assets/platinum_blob1.jpg";
-import rainbowBlob from "./assets/rainbow_raku_blob.jpg";
-import smokyBlob from "./assets/smoky_pitfire_blob.jpg";
+import circularBlob from "./assets/circularBlob2.jpeg";
+import archBlob from "./assets/archBlob.jpg";
+import carvedBlob from "./assets/carvedBlob.jpg";
+import lamp from "./assets/lamp.jpg";
+import heartVase from "./assets/heartVase2.jpg";
+import grapeSodaBlob from "./assets/grapeSodaRakuBlob.jpg";
+import mermaidBlob from "./assets/mermaidBlob.jpg";
+import twoArmedBlob from "./assets/twoArmedSeaBlob.jpg";
+import raspberry from "./assets/raspberryInception.jpg";
+import motherBlob from "./assets/blobWithBB.jpg";
 import { ArrowLeft } from "./assets/ArrowLeft.jsx";
 import { ArrowRight } from "./assets/ArrowRight";
 import { css } from "@emotion/css";
@@ -31,7 +35,12 @@ const styles = {
   imageContainer: css`
     display: flex;
     flex-direction: column;
-    width: 70%;
+    width: 60%;
+    height: 625px;
+    object-fit: cover;
+  `,
+  image: css`
+    border: 20px solid black;
   `,
   caption: css`
     font-family: "Old Standard TT", serif;
@@ -46,40 +55,64 @@ const styles = {
 
 const blobs = [
   {
-    image: bwBlob,
+    image: circularBlob,
     altText:
-      "A tall, curvaceous sculpture with an undulating shape. It has a shiny black & white smoky surface with a strong demarcation between the two colors",
-    caption: "Pit fired stoneware with terra sigillata - 2023",
+      "An abstract shape - circular at the bottom with four curving blobby arms that meet at the top. The shape is made of a rough, tan clay with spots and there are brush strokes in three different blues across the surface.",
+    caption: "Stoneware with underglaze - 2025",
   },
   {
-    image: platinumBlob1,
+    image: archBlob,
     altText:
-      "An amorphous shape with circular divots. The surface is a shiny platinum color that shines brightly where it catches the light.",
-    caption: "Stoneware with platinum luster - 2023",
+      "An undulating dark grey arch with black spots across the whole surface. The spots increase in size on the concave planes and decrease inside on the convex planes to exaggerate the undulating shape.",
+    caption: "Stoneware with underglaze - 2025",
   },
   {
-    image: mossyBlob,
+    image: lamp,
     altText:
-      "A sculpture with an undulating shape comprised of bigger and smaller mounds. The surface is a pale blue-green with sections of smooth glaze ribboning through sections of divots that look like hammered-metal",
-    caption: "Textured stoneware with Oribe glaze - 2023",
+      "A two-legged blobby shape with one side standing tall and the other curving in to meet it. At the top there's a cup-like shape that's topped with a white globe lightbulb. The surface is white with toasty brown areas and the whole thing is covered with small black dots.",
+    caption: "Stoneware with underglaze - 2025",
   },
   {
-    image: lavaBlob,
+    image: carvedBlob,
     altText:
-      "A tall amorphous shape that brings to mind an abstract hunched figure. It's a dark red with clouds and spots of grey, black, and cream stretching across the surface like a galaxy.",
-    caption: "Pit fired stoneware with terra sigillata - 2023",
+      "A form that bubbles in and out. It's covered in oblong carvings of various sizes that flow with the shape. The carvings are filled with blues and greens and the uncarved space is a light cool gray with speckles.",
+    caption: "Textured stoneware with underglaze and celadon glaze - 2024",
   },
   {
-    image: rainbowBlob,
+    image: heartVase,
     altText:
-      "A bulbous sculpture with multi-sized circular divots. It has a shiny, multicolored surface that moves between chartreuse greens, rusty reds, light blues, and yellows. ",
-    caption: "Raku glazed & fired stoneware - 2023",
+      "A vase shaped like an abstract human heart. Lines are carved into the surface to create a wavy checkerboard pattern that follows the convex and concave planes of the shape. The checkers are filled with metallic blue, silver, rusty red, pearly white, and celadon glazes. The lines are filled in with black.",
+    caption: "Raku glazed & fired stoneware - 2024",
   },
   {
-    image: smokyBlob,
+    image: twoArmedBlob,
     altText:
-      "A curved sculpture with a surface color of warm and cool greys that form a smoky pattern that evokes galaxies. ",
-    caption: "Pit fired stoneware with terra sigillata - 2023",
+      "A undulating bulbous base that splits into two arms that evoke snakes or claws. The surface is both textured and smooth with a tan base and a teal tint over the top.",
+    caption: "Stoneware with experimental glaze, underglaze, and wax - 2025",
+  },
+  {
+    image: grapeSodaBlob,
+    altText:
+      "A curved sculpture that appears somewhat human or alien in nature - it has a wide curvy base that tapers into a thin neck and topped with a large head. The suface is a dark metallic purple with white spots and patches of blue metallic glaze peppering the surface.",
+    caption: "Pit fired with terra sigillata, then Raku glazed & fired - 2025",
+  },
+  {
+    image: mermaidBlob,
+    altText:
+      "A curved white sculpture that's wide at the base and narrow at the top. The surface is a combination of smooth areas and texture similar to hammered metal. Golden flowers, pearls, lines, and abstract shapes sit on the surface of the sculpture decorating it from top to bottom.",
+    caption: "Stoneware with highline white glaze and gold luster - 2024",
+  },
+  {
+    image: raspberry,
+    altText:
+      "A giant ceramic reaspberry photographed next to 4 real raspberries for scale. The ceramic raspberry is roughly 8 times larger than the real raspberries.",
+    caption: "Earthenware with underglaze and clear glaze - 2024",
+  },
+  {
+    image: motherBlob,
+    altText:
+      "An abstract shape that evokes a mother holding a baby in her arms. The surface is coverd in dark brown, white, grey, and purple markings that are reminiscent of galaxies. The surface of the sculpture shines where it's hit with light.",
+    caption: "Pit-fired stoneware with terra sigilata and wax - 2024",
   },
 ];
 
@@ -99,17 +132,11 @@ const ImageModule = () => {
       >
         <ArrowLeft />
       </button>
-      <div
-        className={css`
-          display: flex;
-          flex-direction: column;
-          width: 70%;
-        `}
-      >
+      <div className={styles.imageContainer}>
         <img
           src={blobs[blobDisplayed].image}
           className={styles.image}
-          alttext={blobs[blobDisplayed].altText}
+          alt={blobs[blobDisplayed].altText}
         />
         <p className={styles.caption}>{`${blobs[blobDisplayed].caption}`}</p>
       </div>
