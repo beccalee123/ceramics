@@ -35,19 +35,26 @@ const styles = {
   imageContainer: css`
     display: flex;
     flex-direction: column;
-    width: 60%;
-    height: 625px;
     object-fit: cover;
+    width: 80%;
+    @media screen and (min-width: 780px) {
+      width: 60%;
+      height: 625px;
+    }
   `,
   image: css`
-    border: 20px solid black;
+    border: 7px solid black;
+    @media screen and (min-width: 400px) {
+      border: 20px solid black;
+    }
   `,
   caption: css`
     font-family: "Old Standard TT", serif;
     color: black;
     font-size: 1rem;
     margin: 10px 0px;
-    @media screen and (min-width: 780px) {
+    height: 2rem;
+    @media screen and (min-width: 1000px) {
       font-size: 1.3rem;
     }
   `,

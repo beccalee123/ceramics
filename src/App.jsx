@@ -12,8 +12,7 @@ const styles = {
     width: 100%;
     background-color: snow;
     position: relative;
-    @media screen and (min-width: 780px) {
-      padding-top: 4rem;
+    @media screen and (min-width: 1000px) {
       padding-bottom: 2rem;
     }
   `,
@@ -24,8 +23,7 @@ const styles = {
     justify-content: center;
     flex-direction: column;
     width: 100%;
-    @media screen and (min-width: 780px) {
-      /* flex-direction: row; */
+    @media screen and (min-width: 1000px) {
       width: 80%;
     }
   `,
@@ -34,48 +32,54 @@ const styles = {
     width: 100%;
     display: flex;
     justify-content: center;
-    @media screen and (min-width: 780px) {
+    @media screen and (min-width: 1000px) {
       width: 70%;
     }
   `,
   header: css`
     font-family: "Bebas Neue", sans-serif;
-    width: 100%;
     padding: 2rem;
     font-size: 2.5rem;
-
-    @media screen and (min-width: 780px) {
-      width: -moz-max-content;
-      width: -webkit-max-content;
-      width: intrinsic;
+    @media screen and (min-width: 540px) {
       white-space: nowrap;
       overflow-wrap: no-wrap;
-      margin-top: -5rem;
       font-size: 4rem;
     }
   `,
   imageModuleContainer: css`
-    @media screen and (min-width: 780px) {
+    width: 100%;
+    @media screen and (min-width: 1000px) {
     }
   `,
   copyright: css`
     margin-top: 2rem;
-    @media screen and (min-width: 780px) {
+    @media screen and (min-width: 1000px) {
       margin-top: 4rem;
     }
   `,
   circleBlob: css`
-    position: absolute;
-    bottom: 0;
-    right: 0px;
-    width: 25%;
+    display: none;
+    @media screen and (min-width: 780px) {
+      display: block;
+      position: absolute;
+      bottom: 0;
+      right: 0px;
+      width: 30%;
+    }
   `,
   rotatedBlob: css`
-    position: absolute;
-    top: 0;
-    left: 0px;
-    width: 25%;
+    display: none;
     transform: rotate(180deg);
+    @media screen and (min-width: 780px) {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0px;
+      width: 25%;
+    }
+    /* @media screen and (min-width: 1000px) {
+      width: 30%;
+    } */
   `,
 };
 

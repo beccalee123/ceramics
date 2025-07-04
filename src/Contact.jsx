@@ -4,30 +4,34 @@ const styles = {
   heading: css`
     font-family: "Bebas Neue", sans-serif;
     font-size: 2.5rem;
-    @media screen and (min-width: 780px) {
+    @media screen and (min-width: 540px) {
       font-size: 4rem;
     }
   `,
+
   secondHeading: css`
     margin-top: 4rem;
   `,
   textBlock: css`
     font-family: "Old Standard TT", serif;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     display: block;
-    padding: 20px;
-    @media screen and (min-width: 780px) {
-      padding: 32px 40px;
+    @media screen and (min-width: 700px) {
+      font-size: 1.3rem;
     }
   `,
   textContainer: css`
-    margin-top: 10px;
-    width: 70%;
+    margin-top: 2rem;
+    width: 80%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     @media screen and (min-width: 780px) {
+      margin-top: 5rem;
+      width: 60%;
+    }
+    @media screen and (min-width: 1000px) {
       margin-top: 10rem;
     }
   `,
