@@ -38,12 +38,13 @@ const styles = {
   `,
   header: css`
     font-family: "Bebas Neue", sans-serif;
-    padding: 2rem;
+    padding: 1rem;
     font-size: 2.5rem;
     @media screen and (min-width: 540px) {
       white-space: nowrap;
       overflow-wrap: no-wrap;
       font-size: 4rem;
+      padding: 2rem;
     }
   `,
   imageModuleContainer: css`
@@ -77,9 +78,6 @@ const styles = {
       left: 0px;
       width: 25%;
     }
-    /* @media screen and (min-width: 1000px) {
-      width: 30%;
-    } */
   `,
 };
 
