@@ -1,5 +1,5 @@
 import { useState } from "react";
-import circularBlob from "./assets/circularBlob2.jpeg";
+import circularBlob from "./assets/circularBlob2.jpg";
 import archBlob from "./assets/archBlob.jpg";
 import carvedBlob from "./assets/carvedBlob.jpg";
 import lamp from "./assets/lamp.jpg";
